@@ -24,8 +24,9 @@ netstat -tnpa | grep init_sat
 ### netstat flags
 * -a Shows the state of all sockets
 * -p Show connections or statistics only for a particular protocol
-2. Get TCP connection IP and VXNlcm5hbWU6IHdpcmVzaGFyay1yb2NrcwpQYXNzd29yZDogc3RhcnQtc25pZmZpb```
-192.168.0.23:56826
+2. Get TCP connection IP and ports
+```
+*.*.*.*:1337 (* is hidden)
 ```
 3. Wireshark and analyze packages
 ```bash
