@@ -1,0 +1,97 @@
+Pico's a CTFFFFFFF
+my mind is waitin
+It's waitin
+
+Put my mind of Pico into This
+my flag is not found
+put This into my flag
+put my flag into Pico
+
+
+shout Pico
+shout Pico
+shout Pico
+
+My song's something
+put Pico into This
+
+Knock This down, down, down
+put This into CTF
+
+shout CTF
+my lyric is nothing
+Put This without my song into my lyric
+Knock my lyric down, down, down
+
+shout my lyric
+
+Put my lyric into This
+Put my song with This into my lyric
+Knock my lyric down
+
+shout my lyric
+
+Build my lyric up, up ,up
+
+shout my lyric
+shout Pico
+shout It
+
+Pico CTF is fun
+security is important
+Fun is fun
+Put security with fun into Pico CTF
+Build Fun up
+shout fun times Pico CTF
+put fun times Pico CTF into my song
+
+build it up
+
+shout it
+shout it
+
+build it up, up
+shout it
+shout Pico
+
+
+Pico = 19
+my_mind = 6
+It = 6
+This = my_mind * Pico
+my_flag = 35
+put This into my_flag
+put my_flag into Pico
+shout Pico
+shout Pico
+shout Pico
+my_song = 9
+put Pico into This
+This -= 1, down, down
+put This into CTF
+shout CTF
+my_lyric = False
+my_lyric = This - my_song
+my_lyric -= 1, down, down
+shout my_lyric
+This = my_lyric
+my_lyric = my_song + This
+my_lyric -= 1
+shout my_lyric
+my_lyric += 1, up ,up
+shout my_lyric
+shout Pico
+shout It
+Pico_CTF = 3
+security = important
+Fun = 3
+Pico_CTF = security + fun
+Fun += 1
+shout fun * Pico_CTF
+put fun * Pico_CTF into my_song
+build Fun up
+shout it
+shout it
+build Fun up, up
+shout it
+shout Pico
