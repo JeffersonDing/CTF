@@ -8,7 +8,7 @@ const rl = readline.createInterface({
 
 process.stdout.write('Welcome to my Calculator-as-a-Service (CaaS)!\n')
 process.stdout.write('This calculator lets you use the full power of Javascript for\n')
-process.stdout.write('your computations! Try `Math.log(Math.expm1(5) + 1)`\n')
+process.stdout.write('your computations! Try ``\n')
 process.stdout.write('Type q to exit.\n')
 rl.prompt()
 rl.addListener('line', (input) => {

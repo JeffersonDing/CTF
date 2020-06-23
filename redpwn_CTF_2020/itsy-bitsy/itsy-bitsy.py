@@ -54,5 +54,5 @@ def main():
     encrypted_bits = bit_str_xor(flag_bits,random_bits)
     print(f'Ciphertext: {encrypted_bits}')
 
-#if __name__ == '__main__':
-    #main()
+if __name__ == '__main__':
+    main()
