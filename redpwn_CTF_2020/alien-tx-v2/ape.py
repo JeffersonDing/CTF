@@ -25,4 +25,4 @@ with open("ape1.txt", 'w') as f:
             f.write("".join([chr(c) for c in k19]) + '\n')
             for i in range(0,399):
                 k21[i % 21]=k19[i%19]^k399[i]
-            j.write("".join([chr(c) for c in k19])+"".join([chr(c) for c in k21]) + '\n')
+            j.write("".join([chr(c) for c in k21])+"".join([chr(c) for c in k19])+'\n')
