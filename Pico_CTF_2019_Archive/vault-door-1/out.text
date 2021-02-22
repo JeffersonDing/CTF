@@ -1,0 +1,69 @@
+Traceback (most recent call last):
+  File "/home/tydin/git_repo/CTF/Pico_CTF_2019_Archive/vault-door-1/solve.py", line 35, in <module>
+    test()
+  File "/home/tydin/git_repo/CTF/Pico_CTF_2019_Archive/vault-door-1/solve.py", line 29, in test
+    test_java_crackme1()
+  File "/home/tydin/git_repo/CTF/Pico_CTF_2019_Archive/vault-door-1/solve.py", line 18, in test_java_crackme1
+    project = angr.Project(binary_path)
+  File "/home/tydin/git_repo/CTF/Pico_CTF_2019_Archive/angr/angr/lib/python3.9/site-packages/angr/project.py", line 131, in __init__
+    self.loader = cle.Loader(self.filename, concrete_target=concrete_target, **load_options)
+  File "/home/tydin/git_repo/CTF/Pico_CTF_2019_Archive/angr/angr/lib/python3.9/site-packages/cle/loader.py", line 138, in __init__
+    self.initial_load_objects = self._internal_load(main_binary, *preload_libs, *force_load_libs, preloading=(main_binary, *preload_libs))
+  File "/home/tydin/git_repo/CTF/Pico_CTF_2019_Archive/angr/angr/lib/python3.9/site-packages/cle/loader.py", line 657, in _internal_load
+    obj = self._load_object_isolated(main_spec)
+  File "/home/tydin/git_repo/CTF/Pico_CTF_2019_Archive/angr/angr/lib/python3.9/site-packages/cle/loader.py", line 839, in _load_object_isolated
+    result = backend_cls(binary, binary_stream, is_main_bin=self.main_object is None, loader=self, **options)
+  File "/home/tydin/git_repo/CTF/Pico_CTF_2019_Archive/angr/angr/lib/python3.9/site-packages/cle/backends/java/jar.py", line 42, in __init__
+    super().__init__(jar_path, binary_stream,
+  File "/home/tydin/git_repo/CTF/Pico_CTF_2019_Archive/angr/angr/lib/python3.9/site-packages/cle/backends/java/soot.py", line 47, in __init__
+    pysoot_lifter = Lifter(self.binary,
+  File "/home/tydin/git_repo/CTF/Pico_CTF_2019_Archive/angr/pysoot/pysoot/lifter.py", line 57, in __init__
+    self._get_ir()
+  File "/home/tydin/git_repo/CTF/Pico_CTF_2019_Archive/angr/pysoot/pysoot/lifter.py", line 69, in _get_ir
+    self.soot_wrapper.init(config)
+  File "/home/tydin/git_repo/CTF/Pico_CTF_2019_Archive/angr/pysoot/pysoot/jython_wrapper.py", line 86, in wrapper
+    return self.remote_call((name, args, kwargs, ipc_options))
+  File "/home/tydin/git_repo/CTF/Pico_CTF_2019_Archive/angr/pysoot/pysoot/jython_wrapper.py", line 106, in remote_call
+    type_res, buf = self._remote_call_int()
+  File "/home/tydin/git_repo/CTF/Pico_CTF_2019_Archive/angr/pysoot/pysoot/jython_wrapper.py", line 162, in _remote_call_int
+    raise JythonClientException(estr)
+pysoot.errors.JythonClientException: JYTHON SOCKET CLOSED
+STDOUT:
+b'Soot CUSTOM: Scene created! >>> 3
+'
+STDERR:
+b'WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by jnr.posix.JavaLibCHelper (file:/home/tydin/git_repo/CTF/Pico_CTF_2019_Archive/angr/pysoot/pysoot/jython_bin/jython.jar) to method sun.nio.ch.SelChImpl.getFD()
+WARNING: Please consider reporting this to the maintainers of jnr.posix.JavaLibCHelper
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+'b"DEBUG   | 2021-02-22 13:58:50,273 | pysoot.jython_runner | created class <class 'soot_manager.SootManager'>
+"b"DEBUG   | 2021-02-22 13:58:50,290 | pysoot.jython_runner | received command: (u'__init__', ({u'ir_format': u'shimple', u'android_sdk': u'None', u'main_class': u'None', u'soot_classpath': u'/home/tydin/git_repo/CTF/Pico_CTF_2019_Archive/angr/pysoot/bin/rt.jar:/home/tydin/git_repo/CTF/Pico_CTF_2019_Archive/angr/pysoot/bin/jce.jar', u'input_format': u'jar', u'input_file': u'/home/tydin/git_repo/CTF/Pico_CTF_2019_Archive/vault-door-1/VaultDoor1.jar'},), {}, {u'return_pickle': False, u'save_pickle': None, u'return_result': True, u'split_results': 10})
+"b'Traceback (most recent call last):
+  File "/home/tydin/git_repo/CTF/Pico_CTF_2019_Archive/angr/pysoot/pysoot/jython_runner.py", line 105, in <module>
+    jc.main_loop()
+  File "/home/tydin/git_repo/CTF/Pico_CTF_2019_Archive/angr/pysoot/pysoot/jython_runner.py", line 48, in main_loop
+    instance = created_class(*r[1], **r[2])
+  File "/home/tydin/git_repo/CTF/Pico_CTF_2019_Archive/angr/pysoot/pysoot/soot_manager.py", line 40, in __init__
+    self._create_scene(config)
+  File "/home/tydin/git_repo/CTF/Pico_CTF_2019_Archive/angr/pysoot/pysoot/soot_manager.py", line 73, in _create_scene
+    Scene.v().loadNecessaryClasses()
+'b'\tat org.objectweb.asm.ClassReader.<init>(ClassReader.java:170)
+\tat org.objectweb.asm.ClassReader.<init>(ClassReader.java:153)
+\tat org.objectweb.asm.ClassReader.<init>(ClassReader.java:424)
+\tat soot.asm.AsmClassSource.resolve(AsmClassSource.java:60)
+\tat soot.SootResolver.bringToHierarchyUnchecked(SootResolver.java:236)
+\tat soot.SootResolver.bringToHierarchy(SootResolver.java:209)
+\tat soot.SootResolver.bringToSignatures(SootResolver.java:267)
+\tat soot.SootResolver.processResolveWorklist(SootResolver.java:171)
+\tat soot.SootResolver.resolveClass(SootResolver.java:134)
+\tat soot.Scene.loadClass(Scene.java:876)
+\tat soot.Scene.loadClassAndSupport(Scene.java:862)
+\tat soot.Scene.loadNecessaryClasses(Scene.java:1616)
+\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+\tat java.base/java.lang.reflect.Method.invoke(Method.java:566)
+
+'b'java.lang.IllegalArgumentException: java.lang.IllegalArgumentException
+'
