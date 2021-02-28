@@ -1,8 +1,4 @@
-package VaultDoor1;
-
-import java.util.*;
-
-class VaultDoor1 {
+public class VaultDoor1 {
     public static void main(String args[]) {
         VaultDoor1 vaultDoor = new VaultDoor1();
         Scanner scanner = new Scanner(System.in);
