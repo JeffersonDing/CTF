@@ -19,14 +19,16 @@ def shift(c, k):
     return ALPHABET[(t1 + t2) % len(ALPHABET)]
 
 
-flag = "hellotest"
-key = "a"
-assert all([k in ALPHABET for k in key])
-assert len(key) == 1
+for i in ALPHABET:
+    flag = "hellotest"
+    key = i
+    assert all([k in ALPHABET for k in key])
+    assert len(key) == 1
 
-b16 = b16_encode(flag)
-enc = ""
-print(b16)
-for i, c in enumerate(b16):
-    enc += shift(c, key[i % len(key)])
-print(enc)
+    b16 = b16_encode(flag)
+    enc = ""
+    print(i+" B16: "+b16)
+    for i, c in enumerate(b16):
+        print(i, c)
+        enc += shift(c, key[i % len(key)])
+    # print(enc)
