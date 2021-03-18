@@ -20,7 +20,7 @@ def shift(c, k):
 
 
 for i in ALPHABET:
-    flag = "hellotest"
+    flag = "pico"
     key = i
     assert all([k in ALPHABET for k in key])
     assert len(key) == 1
@@ -29,6 +29,6 @@ for i in ALPHABET:
     enc = ""
     print(i+" B16: "+b16)
     for i, c in enumerate(b16):
-        print(i, c)
+        print(i, c, end='|')
         enc += shift(c, key[i % len(key)])
-    # print(enc)
+    print(enc, end="\n\n")

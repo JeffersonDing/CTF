@@ -1,0 +1,1 @@
+dns && dns.qry.name matches "\.reddshrimpandherring.com.us-west-1.ec2-utilities.amazonaws.com" && dns.flags.response ==1 && ip.src==18.217.1.57
