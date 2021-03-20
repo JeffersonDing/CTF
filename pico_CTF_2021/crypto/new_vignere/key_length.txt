@@ -1,0 +1,252 @@
+1 *********************
+l
+e
+j
+j
+l
+n
+j
+m
+j
+n
+d
+k
+m
+j
+i
+n
+k
+i
+l
+b
+m
+l
+l
+j
+j
+k
+m
+n
+a
+k
+m
+m
+i
+g
+h
+h
+o
+c
+m
+l
+l
+o
+j
+h
+j
+m
+a
+i
+j
+p
+i
+o
+h
+n
+l
+o
+j
+m
+o
+k
+j
+k
+j
+a
+2 *********************
+le
+jj
+ln
+jm
+jn
+dk
+mj
+in
+ki
+lb
+ml
+lj
+jk
+mn
+ak
+mm
+ig
+hh
+oc
+ml
+lo
+jh
+jm
+ai
+jp
+io
+hn
+lo
+jm
+ok
+jk
+ja
+3 *********************
+lej
+jln
+jmj
+ndk
+mji
+nki
+lbm
+llj
+jkm
+nak
+mmi
+ghh
+ocm
+llo
+jhj
+mai
+jpi
+ohn
+loj
+mok
+jkj
+a
+4 *********************
+lejj
+lnjm
+jndk
+mjin
+kilb
+mllj
+jkmn
+akmm
+ighh
+ocml
+lojh
+jmai
+jpio
+hnlo
+jmok
+jkja
+5 *********************
+lejjl
+njmjn
+dkmji
+nkilb
+mlljj
+kmnak
+mmigh
+hocml
+lojhj
+maijp
+iohnl
+ojmok
+jkja
+6 *********************
+lejjln
+jmjndk
+mjinki
+lbmllj
+jkmnak
+mmighh
+ocmllo
+jhjmai
+jpiohn
+lojmok
+jkja
+7 *********************
+lejjlnj
+mjndkmj
+inkilbm
+lljjkmn
+akmmigh
+hocmllo
+jhjmaij
+piohnlo
+jmokjkj
+a
+8 *********************
+lejjlnjm
+jndkmjin
+kilbmllj
+jkmnakmm
+ighhocml
+lojhjmai
+jpiohnlo
+jmokjkja
+9 *********************
+lejjlnjmj
+ndkmjinki
+lbmlljjkm
+nakmmighh
+ocmllojhj
+maijpiohn
+lojmokjkj
+a
+
+***************
+col1: 'l','o'
+col2: 'd','a'
+col3: 'j','m'
+col4: 'm','j'
+col5: 'l','o'
+col6: 'i'
+col7: 'j'
+col8: 'h','k'
+col9: 'j','m'
+***************
+
+***************
+[['i'], 
+['n'], 
+['g'], 
+['g'], 
+['i'], 
+['f', 'c'], 
+['g', 'd'], 
+['e'], 
+['g']]
+
+
+10 *********************
+lejjlnjmjn
+dkmjinkilb
+mlljjkmnak
+mmighhocml
+lojhjmaijp
+iohnlojmok
+jkja
+11 *********************
+lejjlnjmjnd
+kmjinkilbml
+ljjkmnakmmi
+ghhocmllojh
+jmaijpiohnl
+ojmokjkja
+12 *********************
+lejjlnjmjndk
+mjinkilbmllj
+jkmnakmmighh
+ocmllojhjmai
+jpiohnlojmok
+jkja
+13 *********************
+lejjlnjmjndkm
+jinkilbmlljjk
+mnakmmighhocm
+llojhjmaijpio
+hnlojmokjkja
+14 *********************
+lejjlnjmjndkmj
+inkilbmlljjkmn
+akmmighhocmllo
+jhjmaijpiohnlo
+jmokjkja
