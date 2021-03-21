@@ -12,19 +12,21 @@ def pad(msg):
     pad = block_len - over
     return (msg + " " * pad).encode()
 
-
 def generate_key():
     return pad("".join(random.choice(string.digits) for _ in range(6)))
 
 
+FLAG = open("flag").read().rstrip()
+KEY1 = generate_key()
+KEY2 = generate_key()
+
+
 def get_input():
     try:
-        res = binascii.unhexlify(
-            input("What data would you like to encrypt? ").rstrip()).decode()
+        res = binascii.unhexlify(input("What data would you like to encrypt? ").rstrip()).decode()
     except:
         res = None
     return res
-
 
 def double_encrypt(m):
     msg = pad(m)
@@ -35,23 +37,13 @@ def double_encrypt(m):
     return binascii.hexlify(cipher2.encrypt(enc_msg)).decode()
 
 
-FLAG = open("flag").read().rstrip()
-KEY1 = generate_key()
-KEY2 = generate_key()
+print("Here is the flag:")
+print(double_encrypt(FLAG))
 
+while True:
+    inputs = get_input()
+    if inputs:
+        print(double_encrypt(inputs))
+    else:
+        print("Invalid input.")
 
-def run():
-    print(KEY1, KEY2)
-
-    print("Here is the flag:")
-    print(double_encrypt(FLAG))
-
-    while True:
-        inputs = get_input()
-        if inputs:
-            print(double_encrypt(inputs))
-        else:
-            print("Invalid input.")
-
-
-run()
