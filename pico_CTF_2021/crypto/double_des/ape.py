@@ -52,7 +52,7 @@ def double_decrypt(cipher, key1, key2):
         return("key error")
 
 
-r = remote("mercury.picoctf.net", 5958)
+r = remote("mercury.picoctf.net", int(input("Enter port number:")))
 r.recvline()
 flag = r.recvline(keepends=False).decode()
 r.sendafter('? ', b'41\n')
