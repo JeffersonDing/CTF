@@ -1,0 +1,32 @@
+{
+  "name": "@bithug/client",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "webpack",
+    "watch": "webpack serve"
+  },
+  "devDependencies": {
+    "@types/history": "^4.7.8",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "@types/react-router-dom": "^5.1.7",
+    "css-loader": "^5.0.1",
+    "html-webpack-plugin": "^4.5.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-pwn": "^0.1.1",
+    "react-router-dom": "^5.2.0",
+    "react-toastify": "^6.2.0",
+    "sass": "^1.32.5",
+    "sass-loader": "^10.1.1",
+    "source-map-loader": "^2.0.0",
+    "style-loader": "^2.0.0",
+    "ts-loader": "^8.0.14",
+    "webpack": "^5.17.0",
+    "webpack-cli": "^4.4.0",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "dependencies": {}
+}

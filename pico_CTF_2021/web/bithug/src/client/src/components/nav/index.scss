@@ -1,0 +1,38 @@
+@use "~react-pwn/palette.scss";
+
+.bh-nav {
+    display: flex;
+    flex-direction: row;
+    min-height: 64px;
+    background: palette.$color-neutral-08;
+    color: palette.$color-neutral-01;
+    margin-bottom: 32px;
+    align-items: center;
+
+    .logo {
+        font-size: 24px;
+        font-family: Dosis;
+        color: palette.$color-secondary-08;
+    }
+
+    .bh-nav-item, .logo {
+        margin: 0px 16px;
+    }
+
+    .bh-nav-item {
+        border-radius: 4px;
+        padding: 8px 8px;
+        box-shadow: 0px 0px 0px 2px palette.$color-neutral-05;
+        cursor: pointer;
+        transition: box-shadow 100ms ease-in, color 100ms ease-in;
+
+        &:hover {
+            box-shadow: 0px 0px 0px 2px palette.$color-primary-05;
+            color: palette.$color-primary-05;
+        }
+    }
+
+    .spacer {
+        flex-grow: 1;
+    }
+}

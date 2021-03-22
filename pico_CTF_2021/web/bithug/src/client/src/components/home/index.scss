@@ -1,0 +1,8 @@
+.bh-home {
+    display: grid;
+    grid-template-columns: 600px;
+    grid-auto-rows: max-content;
+    row-gap: 32px;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,8 @@
+@use "~react-pwn/palette.scss";
+
+.bh-logo {
+    font-size: 48px;
+    font-family: "Dosis";
+    padding: 24px;
+    color: palette.$color-secondary-08;
+}

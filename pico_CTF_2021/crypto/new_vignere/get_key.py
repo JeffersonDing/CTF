@@ -36,4 +36,4 @@ for i in range(0, 9):
 for x in range(len(possible)):
     possible[x] = list(set(possible[x]))
 
-print(possible)
+print(find_char('a', 'c'))
