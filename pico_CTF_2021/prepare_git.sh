@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -size +100M | cat >> .gitignore
+find . -size +100M |sed 's|^./||' | cat >> .gitignore
