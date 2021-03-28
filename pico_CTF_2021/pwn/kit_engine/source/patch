@@ -1,0 +1,116 @@
+uint64_t doubleToUint64_t(double d)
+{
+   union
+   {
+      double d;
+      uint64_t u;
+   } conv = {.d = d};
+   return conv.u;
+}
+
+void Shell::Breakpoint(const v8::FunctionCallbackInfo<v8::Value> &args)
+{
+   __asm__("int3");
+}
+
+void Shell::AssembleEngine(const v8::FunctionCallbackInfo<v8::Value> &args)
+{
+   Isolate *isolate = args.GetIsolate();
+   if (args.Length() != 1)
+   {
+      return;
+   }
+
+   double *func = (double *)mmap(NULL, 4096, PROT_READ | PROT_WRITE | PROT_EXEC, MAP_PRIVATE | MAP_ANONYMOUS, -1, 0);
+   if (func == (double *)-1)
+   {
+      printf("Unable to allocate memory. Contact admin\n");
+      return;
+   }
+
+   if (args[0]->IsArray())
+   {
+      Local<Array> arr = args[0].As<Array>();
+
+      Local<Value> element;
+      for (uint32_t i = 0; i < arr->Length(); i++)
+      {
+         if (arr->Get(isolate->GetCurrentContext(), i).ToLocal(&element) && element->IsNumber())
+         {
+            Local<Number> val = element.As<Number>();
+            func[i] = val->Value();
+         }
+      }
+
+      printf("Memory Dump. Watch your endianness!!:\n");
+      for (uint32_t i = 0; i < arr->Length(); i++)
+      {
+         printf("%d: float %f hex %lx\n", i, func[i], doubleToUint64_t(func[i]));
+      }
+
+      printf("Starting your engine!!\n");
+      void (*foo)() = (void (*)())func;
+      foo();
+   }
+   printf("Done\n");
+}
+
+void Shell::ModuleResolutionSuccessCallback(
+    const FunctionCallbackInfo<Value> &info)
+{
+  std::unique_ptr<ModuleResolutionData> module_resolution_data(
+Local<String> Shell::Stringify(Isolate* isolate, Local<Value> value) {
+      Local<ObjectTemplate> Shell::CreateGlobalTemplate(Isolate * isolate)
+      {
+         Local<ObjectTemplate> global_template = ObjectTemplate::New(isolate);
+
+         // Add challenge builtin, and remove some unintented solutions
+         global_template->Set(isolate, "AssembleEngine", FunctionTemplate::New(isolate, AssembleEngine));
+         global_template->Set(isolate, "Breakpoint", FunctionTemplate::New(isolate, Breakpoint));
+         global_template->Set(isolate, "version",
+                              FunctionTemplate::New(isolate, Version));
+
+         global_template->Set(isolate, "print", FunctionTemplate::New(isolate, Print));
+
+         if (!options.omit_quit)
+         {
+            global_template->Set(isolate, "quit", FunctionTemplate::New(isolate, Quit));
+         }
+
+#ifdef V8_FUZZILLI
+   global_template->Set(
+@@ -2243,11 +2265,6 @@ Local<ObjectTemplate> Shell::CreateGlobalTemplate(Isolate* isolate) {
+       FunctionTemplate::New(isolate, Fuzzilli), PropertyAttribute::DontEnum);
+#endif // V8_FUZZILLI
+
+       return global_template;
+ }
+ 
+@@ -2449,10 +2466,10 @@ void Shell::Initialize(Isolate* isolate, D8Console* console,
+             v8::Isolate::kMessageLog);
+      }
+
+      +/*isolate->SetHostImportModuleDynamicallyCallback(
+       Shell::HostImportModuleDynamically);
+   isolate->SetHostInitializeImportMetaObjectCallback(
+
++      Shell::HostInitializeImportMetaObject);*/
+
+#ifdef V8_FUZZILLI
+          // Let the parent process (Fuzzilli) know we are ready.
+          diff-- git a /
+          src / d8 / d8.h b / src / d8 / d8.h index a6a1037cff..4591d27f65 100644
+
+                                         +++b /
+          src / d8 / d8.h @ @-413,
+          6 + 413, 9 @ @class Shell : public i::AllStatic
+      {
+         kNoProcessMessageQueue = false
+      };
+
+      +static void AssembleEngine(const v8::FunctionCallbackInfo<v8::Value> &args);
+      +static void Breakpoint(const v8::FunctionCallbackInfo<v8::Value> &args);
++
+   static bool ExecuteString(Isolate* isolate, Local<String> source,
+                             Local<Value> name, PrintResult print_result,
+                             ReportExceptions report_exceptions,
