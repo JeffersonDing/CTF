@@ -2,7 +2,7 @@ import angr
 import claripy
 
 
-char_length = 35
+char_length = 32
 
 success = 0x00010a72
 fail = 0x00010a86
