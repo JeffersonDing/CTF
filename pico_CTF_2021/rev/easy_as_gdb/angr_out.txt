@@ -1,0 +1,10 @@
+WARNING | 2021-03-28 23:41:08,442 | angr.simos.simos | stdin is constrained to 33 bytes (has_end=True). If you are only providing the first 33 bytes instead of the entire stdin, please use stdin=SimFileStream(name='stdin', content=your_first_n_bytes, has_end=False).
+WARNING | 2021-03-28 23:41:10,683 | angr.storage.memory_mixins.default_filler_mixin | The program is accessing memory or registers with an unspecified value. This could indicate unwanted behavior.
+WARNING | 2021-03-28 23:41:10,683 | angr.storage.memory_mixins.default_filler_mixin | angr will cope with this by generating an unconstrained symbolic variable and continuing. You can resolve this by:
+WARNING | 2021-03-28 23:41:10,683 | angr.storage.memory_mixins.default_filler_mixin | 1) setting a value to the initial state
+WARNING | 2021-03-28 23:41:10,683 | angr.storage.memory_mixins.default_filler_mixin | 2) adding the state option ZERO_FILL_UNCONSTRAINED_{MEMORY,REGISTERS}, to make unknown regions hold null
+WARNING | 2021-03-28 23:41:10,683 | angr.storage.memory_mixins.default_filler_mixin | 3) adding the state option SYMBOL_FILL_UNCONSTRAINED_{MEMORY,REGISTERS}, to suppress these messages.
+WARNING | 2021-03-28 23:41:10,683 | angr.storage.memory_mixins.default_filler_mixin | Filling memory at 0xc0001140 with 32 unconstrained bytes referenced from 0x189380 (strncpy+0x0 in libc.so.6 (0x89380))
+WARNING | 2021-03-28 23:55:25,786 | angr.storage.memory_mixins.default_filler_mixin | Filling memory at 0xc0001160 with 16 unconstrained bytes referenced from 0x189380 (strncpy+0x0 in libc.so.6 (0x89380))
+WARNING | 2021-03-28 23:55:25,786 | angr.storage.memory_mixins.default_filler_mixin | Filling memory at 0xc000118f with 50 unconstrained bytes referenced from 0x189380 (strncpy+0x0 in libc.so.6 (0x89380))
+b'picoCTF{I_5D3_A11DA7_61b3a698}#\x00\n'
