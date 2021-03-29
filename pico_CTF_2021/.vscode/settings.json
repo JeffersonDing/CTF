@@ -1,4 +1,4 @@
 {
-    "python.pythonPath": "/home/tydin/.virtualenvs/angr/bin/python",
+    "python.pythonPath": "/bin/python3",
     "discord.enabled": true
 }
