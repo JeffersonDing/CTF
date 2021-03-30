@@ -1,4 +1,9 @@
 {
     "python.pythonPath": "/usr/bin/python3",
-    "discord.enabled": true
+    "discord.enabled": true,
+    "files.associations": {
+        "*.phps": "php",
+        "*.sage": "python",
+        "*.txt": "c"
+    }
 }
