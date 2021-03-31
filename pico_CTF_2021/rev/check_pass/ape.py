@@ -76,6 +76,7 @@ def getTable():
     found_table = bytearray.fromhex(found_table)
     for i in found_table:
         tmp = i.to_bytes(1, byteorder='little')
+        # unpack to unsigned char, its only one chr so endian doesn't matter
         table.append(unpack('B', tmp)[0])
     return(table)
 
@@ -149,6 +150,7 @@ def getArr2():
     found_arr2 = splitStr(16, found_arr2)
     for i in found_arr2:
         temp = bytes.fromhex(i)
+        # unpack into unsigned long long in little endian
         arr2.append(unpack('<Q', temp)[0])
     return(arr2)
 
