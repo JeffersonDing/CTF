@@ -27,6 +27,7 @@ assert all([k in ALPHABET for k in key]) and len(key) < 15
 
 b16 = b16_encode(flag)
 enc = ""
+print(b16)
 for i, c in enumerate(b16):
     enc += shift(c, key[i % len(key)])
 print(enc)

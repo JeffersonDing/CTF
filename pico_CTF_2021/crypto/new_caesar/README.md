@@ -1,19 +1,8 @@
-a 0 0000
-b 1 0001
-c 2 0010
-d 3 0011
-e 4 0100
-f 5 0101
-g 6 0110
-h 7 0111
-i 8 1111
+# New Caesar
 
-NEVER BE ACCESSED
+I use a brute force script to complete the challenge due to the small alphabet size.
 
-j 9
-k 10
-l 11
-m 12
-n 13
-o 14
-p 15
+## Method
+
+Since the key of this cipher is only 1 character long and the flag is encrypted statically(each character is encrypted independently) we are able to simply try all keys and printable characters and see which one matches the desired output. By keeping a count of how many times the key worked, we know that only the the key that worked for all 39 characters in the flag is the real key thus giving us the output.
+Due to a small alphabet size, the script runs almost instantly.

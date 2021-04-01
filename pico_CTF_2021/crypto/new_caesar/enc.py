@@ -2,7 +2,7 @@ import string
 given = "dcebcmebecamcmanaedbacdaanafagapdaaoabaaafdbapdpaaapadanandcafaadbdaapdpandcac"
 ALPHABET = string.ascii_lowercase[:16]
 LOWERCASE_OFFSET = ord("a")
-payload = string.printable
+payload = string.ascii_letters+string.digits+"_-\{\}?"
 
 
 def splitStr(n, string):  # every 2 characters
@@ -39,15 +39,20 @@ def run(flag, key):
 #key = "b"
 #given = run(flag, key)
 # print(flag)
-print(given)
-target = splitStr(2, given)
-output = []
-for key in ['n']:
-    for goal in target:
-        for test in payload:
-            res = run(test, key)
-            if(goal == res):
-                print(key, end='')
-                output.append(test)
-print("\n")
-print("".join(output))
+def exploit():
+    target = splitStr(2, given)
+    for key in ALPHABET:
+        count = 0
+        potential = []
+        for goal in target:
+            for test in payload:
+                res = run(test, key)
+                if(goal == res):
+                    # print(key, "count ", count, " | ", end='')
+                    count += 1
+                    potential.append(test)
+                    if(count == 38):
+                        return "".join(potential)
+
+
+print(exploit())
