@@ -1,4 +1,4 @@
-# Full credit to @ZeroDayTea discord
+# Full credit to @ZeroDayTea
 from scipy.io import wavfile
 
 samplerate, data = wavfile.read('main.wav')
