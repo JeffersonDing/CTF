@@ -1,3 +1,7 @@
+# Scavenger Hunt
+> Credits to @BC534211
+Basically looking for breadcrumbs in different files.  
+
 first part of the flag (in index.html file)
 
 - picoCTF{t

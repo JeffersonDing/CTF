@@ -46,7 +46,7 @@ UNIQUE
 & bitwise and
 ```
 
-# Paylod
+# Payload
 
 username:`ad'||'min`
 password:`a' IS NOT 'b`

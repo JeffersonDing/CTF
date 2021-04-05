@@ -1,0 +1,2 @@
+# Web Gauntlet 3
+It seems like the payload from `web_gauntlet_2` works here. This stage is supposed to add a character count to the payload but our payload from the previous questions already satisfies the filters.
