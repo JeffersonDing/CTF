@@ -1,5 +1,5 @@
 # Most Cookies
-This challenge uses `flask` as backend framework to set user cookies which we know is prune to forgery attacks.
+This challenge uses `flask` as the backend framework to set user cookies which we know is prone to forgery attacks.
 ## Intuition
 Looking at the source code, we see that the cookie generation secret key is just a random choice out of a small set of strings. This means that we could easily brute-force the cookie by trying every key on our desired payload.
 ## Method
