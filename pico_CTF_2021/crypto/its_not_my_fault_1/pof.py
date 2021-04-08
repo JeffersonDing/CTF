@@ -1,8 +1,6 @@
 import gmpy2
-n =
-
-e =
-
+n = 1
+e = 1
 m = 7516789928765
 
 for dp in range(1000000):
