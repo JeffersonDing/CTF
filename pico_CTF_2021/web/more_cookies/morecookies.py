@@ -1,5 +1,7 @@
 # Credits to @ZeroDayTea from Discord
 import requests
+from base64 import b64decode
+from base64 import b64encode
 
 # Visualization Tools
 
