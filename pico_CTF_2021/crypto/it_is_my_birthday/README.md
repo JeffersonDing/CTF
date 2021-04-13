@@ -1,4 +1,4 @@
-# It is my birthday 2
+# It is my birthday
 
 This challenge is regarding a `SHA-1` collision on PDF documents. Looking at the hint `shattered.io` we see that it is possible for 2 different PDF files to have identical `SHA1` hashes. But for this challenge, it has to have the same last 1000 bytes as the original invite.
 
