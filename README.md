@@ -1,5 +1,7 @@
 # CTF
 Features logs and writeups of CTF competitions.
+
+More writeups with my team 0x41 can be found on the [team repo](https://github.com/0x41CTF/CTF).
 ## Presonal Blog and Writeups
 Pleas visit my personal [blog](https://jeffersonding.com) to checkout the writeups and other stuff.
 ## Featured Platforms
